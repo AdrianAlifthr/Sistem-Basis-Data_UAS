@@ -1,0 +1,190 @@
+/* Orang Tua Theme - Simple, Calm, Monitoring */
+body.role-orangtua {
+    background-color: var(--ortu-bg);
+}
+
+/* Sidebar Styles (Replaces Top Nav) */
+.ortu-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.ortu-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--ortu-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.ortu-logo i {
+    font-size: 2rem;
+    color: var(--ortu-primary);
+}
+
+.ortu-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    color: var(--text-secondary);
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.ortu-nav-item:hover, .ortu-nav-item.active {
+    background: #f0fdf4; /* Green 50 */
+    color: var(--ortu-primary);
+}
+
+.ortu-nav-item.active {
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(22, 101, 52, 0.1);
+}
+
+.ortu-main {
+    margin-left: 260px;
+    padding: 2rem;
+    max-width: 1200px; /* Limit width for readability */
+}
+
+/* Header within Content */
+.ortu-header {
+    margin-bottom: 2rem;
+}
+
+.ortu-header h2 {
+    font-size: 1.75rem;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+/* Child Profile Header (Re-styled for Sidebar layout) */
+.child-profile {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.child-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: var(--ortu-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.child-info h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+/* Dashboard Grid */
+.monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.m-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.m-card h3 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Simple List for parents */
+.simple-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.simple-list-item:last-child {
+    border-bottom: none;
+}
+
+.status-indicator {
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.status-good { background: #dcfce7; color: #166534; }
+.status-warn { background: #fef9c3; color: #854d0e; }
+.status-bad { background: #fee2e2; color: #991b1b; }
+
+.grade-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Profile Details */
+.profile-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.profile-label { color: #64748b; }
+.profile-value { font-weight: 600; color: #1e293b; }
+
+@media (max-width: 768px) {
+    .monitor-grid { grid-template-columns: 1fr; }
+    .child-profile { flex-direction: column; text-align: center; }
+}
