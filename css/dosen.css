@@ -1,0 +1,191 @@
+/* Dosen Theme - Formal & Efficient */
+body.role-dosen {
+    background-color: var(--dosen-bg);
+}
+
+.dosen-sidebar {
+    background: #1e293b; /* Slate 800 */
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+}
+
+.dosen-logo {
+    padding: 0 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dosen-nav-item {
+    padding: 0.875rem 1.5rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+}
+
+.dosen-nav-item:hover, .dosen-nav-item.active {
+    background: #0f172a; /* Slate 900 */
+    color: white;
+    border-left-color: var(--dosen-accent);
+}
+
+.dosen-main {
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+/* Header */
+.dosen-header {
+    background: white;
+    padding: 1rem 2rem;
+    margin: -2rem -2rem 2rem -2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dosen Cards */
+.d-card {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.d-card h3 {
+    font-size: 1.1rem;
+    color: var(--dosen-secondary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.75rem;
+}
+
+/* Compact Table for Data Entry */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.data-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #475569;
+}
+
+.data-table tr:hover {
+    background: #f8fafc;
+}
+
+.input-small {
+    width: 100%;
+    padding: 0.35rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background: #0ea5e9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.btn-primary:hover { background: #0284c7; }
+
+.btn-outline {
+    border: 1px solid #cbd5e1;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.btn-outline:hover { background: #f1f5f9; }
+
+/* Alert Box */
+.alert-box {
+    background: #ffffff;
+    border-left: 4px solid #f59e0b;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Class Card */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.class-card {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.class-header {
+    background: #f8fafc;
+    padding: 1rem;
+    border-bottom: 1px solid #cbd5e1;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    justify-content: space-between;
+}
+
+.class-body {
+    padding: 1rem;
+}
+
+.class-actions {
+    padding: 0.75rem 1rem;
+    background: #f1f5f9;
+    display: flex;
+    gap: 0.5rem;
+    border-top: 1px solid #cbd5e1;
+}
+
+.action-btn {
+    flex: 1;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    text-align: center;
+    background: white;
+    border: 1px solid #cbd5e1;
+    text-decoration: none;
+    color: #475569;
+    border-radius: 4px;
+}
+.action-btn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
