@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SIA Vokasi</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
         .login-card {
@@ -82,7 +83,7 @@
 
     </style>
 </head>
-<body class="flex min-h-screen items-center justify-center bg-slate-50 p-4">
+<body class="flex items-center justify-center bg-slate-50 p-4">
 
     <div class="login-card">
         <div class="login-header">
@@ -94,19 +95,19 @@
         <form onsubmit="handleLogin(event)">
             <div class="form-group">
                 <label id="label-identity" class="form-label">Username</label>
-                <div class="relative">
-                    <input type="text" class="form-input pl-10" placeholder="Masukkan ID pengguna" required>
+                <div class="relative" style="display: flex; align-items: center; gap: 8px;">
                     <i class="ph ph-user absolute left-3.5 top-3 text-slate-400 text-lg"></i>
+                    <input type="text" class="form-input pl-10" placeholder="Masukkan ID pengguna" required>
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" >
                 <label class="form-label">Password</label>
-                <div class="relative">
+                <div class="relative" style="display: flex; align-items: center; gap: 8px;">
+                    <i class="ph ph-lock-key absolute left-3.5 top-3 text-slate-400 text-lg" ></i>
                     <input type="password" class="form-input pl-10" placeholder="••••••••" required>
-                    <i class="ph ph-lock-key absolute left-3.5 top-3 text-slate-400 text-lg"></i>
                 </div>
-                <div class="text-right mt-1">
+                <div class="text-right" style="margin-top: 10px;">
                     <a href="#" class="text-xs font-semibold hover:underline">Lupa password?</a>
                 </div>
             </div>
@@ -116,7 +117,7 @@
             </button>
         </form>
 
-        <div class="mt-6 text-center text-sm text-slate-500">
+        <div class="mt-6 text-center text-sm text-slate-500" style="margin-top: 10px;">
             Bukan <span id="role-name-text">admin</span>? <a href="index.html" class="font-semibold hover:underline">Ganti Role</a>
         </div>
     </div>
