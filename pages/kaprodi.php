@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || !in_array($_SESSION['role'], ['kaprodi', 'prodi'])) {
+    header("Location: ../login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -37,7 +44,7 @@
         </a>
 
          <div class="mt-auto border-t border-slate-700">
-            <a href="../index.html" class="prodi-nav-item text-red-400 hover:text-red-300">
+            <a href="../logout.php" class="prodi-nav-item text-red-400 hover:text-red-300">
                 <i class="ph ph-sign-out"></i> Logout
             </a>
         </div>

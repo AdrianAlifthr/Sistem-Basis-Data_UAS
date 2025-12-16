@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'mahasiswa') {
+    header("Location: ../login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -35,7 +42,7 @@
             </a>
         </div>
 
-        <a href="../index.html" class="mhs-nav-item" style="color: #ef4444;">
+        <a href="../logout.php" class="mhs-nav-item" style="color: #ef4444;">
             <i class="ph ph-sign-out"></i> Logout
         </a>
     </nav>
@@ -46,14 +53,14 @@
         <!-- Header -->
         <header class="mhs-header">
             <div>
-                <h2 class="text-2xl font-bold">Halo, Adrian! 👋</h2>
+                <h2 class="text-2xl font-bold">Halo, <?php echo htmlspecialchars($_SESSION['username']); ?>! 👋</h2>
                 <p class="text-slate-500">Semester 4 - D3 Teknik Informatika</p>
             </div>
             <div class="user-profile">
-                <div class="avatar">AL</div>
+                <div class="avatar"><?php echo strtoupper(substr($_SESSION['username'], 0, 2)); ?></div>
                 <div class="text-sm">
-                    <div class="font-bold">Adrian Alifa</div>
-                    <div class="text-slate-500">220101010</div>
+                    <div class="font-bold"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
+                    <div class="text-slate-500"><?php echo htmlspecialchars($_SESSION['email']); ?></div>
                 </div>
             </div>
         </header>

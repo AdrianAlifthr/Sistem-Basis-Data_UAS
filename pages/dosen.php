@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'dosen') {
+    header("Location: ../login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -27,15 +34,12 @@
             <a href="#" class="dosen-nav-item" onclick="switchPage('input-nilai', this)">
                 <i class="ph ph-exam"></i> Input Nilai
             </a>
-             <!-- <a href="#" class="dosen-nav-item" onclick="switchPage('absensi', this)">
-                <i class="ph ph-user-check"></i> Absensi
-            </a> -->
             <a href="#" class="dosen-nav-item" onclick="switchPage('pesan', this)">
                 <i class="ph ph-chat-teardrop-text"></i> Pesan & Tiket
             </a>
         </div>
 
-        <a href="../index.html" class="dosen-nav-item">
+        <a href="../logout.php" class="dosen-nav-item">
             <i class="ph ph-sign-out"></i> Keluar
         </a>
     </nav>
@@ -47,14 +51,10 @@
         <header class="dosen-header">
             <h2 class="text-xl font-bold text-slate-700" id="page-title">Dashboard</h2>
             <div class="flex items-center gap-4">
-                <button class="relative">
-                    <i class="ph ph-bell text-2xl text-slate-500"></i>
-                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
-                </button>
                 <div class="flex items-center gap-2">
                     <div class="text-right">
-                        <div class="font-bold text-sm text-slate-700">Budi Santoso, M.Kom</div>
-                        <div class="text-xs text-slate-500">NIDN: 01010101</div>
+                        <div class="font-bold text-sm text-slate-700"><?php echo htmlspecialchars($_SESSION['username']); ?></div>
+                        <div class="text-xs text-slate-500"><?php echo htmlspecialchars($_SESSION['email']); ?></div>
                     </div>
                 </div>
             </div>
