@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/mahasiswa.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body class="role-mahasiswa">
 
     <!-- Sidebar -->
@@ -16,7 +18,7 @@
             <i class="ph-duotone ph-student"></i>
             <span>SIA Mahasiswa</span>
         </div>
-        
+
         <div class="flex-1">
             <a href="#" class="mhs-nav-item active" onclick="switchPage('dashboard', this)">
                 <i class="ph ph-squares-four"></i> Dashboard
@@ -42,7 +44,7 @@
 
     <!-- Main Content -->
     <main class="mhs-main">
-        
+
         <!-- Header -->
         <header class="mhs-header">
             <div>
@@ -113,7 +115,7 @@
                     <i class="ph ph-plus"></i> Tambah Matkul
                 </button>
             </div>
-            
+
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-6">
                 <div class="flex gap-8 mb-4">
                     <div>
@@ -182,7 +184,7 @@
         <!-- PAGE: NILAI -->
         <section id="nilai" class="page-section">
             <h3 class="section-title"><i class="ph-duotone ph-exam text-indigo-500"></i> Transkrip Nilai Semester Ini</h3>
-            
+
             <table class="modern-table">
                 <thead>
                     <tr>
@@ -227,10 +229,10 @@
             </table>
         </section>
 
-         <!-- PAGE: ABSENSI -->
-         <section id="absensi" class="page-section">
+        <!-- PAGE: ABSENSI -->
+        <section id="absensi" class="page-section">
             <h3 class="section-title"><i class="ph-duotone ph-user-check text-indigo-500"></i> Rekap Absensi</h3>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- item -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200">
@@ -293,7 +295,7 @@
             });
             // Show target section
             document.getElementById(pageId).classList.add('active');
-            
+
             // Update nav active state
             document.querySelectorAll('.mhs-nav-item').forEach(item => {
                 item.classList.remove('active');
@@ -302,4 +304,5 @@
         }
     </script>
 </body>
+
 </html>
