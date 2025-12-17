@@ -54,7 +54,16 @@ body {
   background-color: var(--bg-body);
   color: var(--text-primary);
   line-height: 1.5;
+  padding-top: 20px;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+footer{
+  background-color: var(--text-primary);
+  width: 100%;
+  color: var(--bg-body);
+  text-align: center;
 }
 
 h1,

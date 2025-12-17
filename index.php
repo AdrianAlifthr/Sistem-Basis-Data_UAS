@@ -12,12 +12,6 @@
     style="background: #f1f5f9"
   >
     <div class="container text-center mb-10">
-      <div class="mb-4 inline-block p-3 rounded-full bg-white shadow-sm">
-        <i
-          class="ph-duotone ph-graduation-cap text-4xl text-blue-600"
-          style="color: #2563eb"
-        ></i>
-      </div>
       <h1 class="text-4xl font-bold mb-2 text-slate-900">
         Sistem Informasi Akademik
       </h1>
@@ -28,7 +22,7 @@
 
     <div class="landing-grid w-full">
       <!-- Mahasiswa -->
-      <a href="login.html?role=mahasiswa" class="role-card role-mahasiswa group">
+      <a href="login.php?role=mahasiswa" class="role-card role-mahasiswa group">
         <div class="role-icon">
           <i class="ph-fill ph-student"></i>
         </div>
@@ -46,7 +40,7 @@
       </a>
 
       <!-- Dosen -->
-      <a href="login.html?role=dosen" class="role-card role-dosen group">
+      <a href="login.php?role=dosen" class="role-card role-dosen group">
         <div class="role-icon">
           <i class="ph-fill ph-chalkboard-teacher"></i>
         </div>
@@ -64,7 +58,7 @@
       </a>
 
       <!-- Kaprodi -->
-      <a href="login.html?role=kaprodi" class="role-card role-kaprodi group">
+      <a href="login.php?role=kaprodi" class="role-card role-kaprodi group">
         <div class="role-icon">
           <i class="ph-fill ph-briefcase"></i>
         </div>
@@ -82,7 +76,7 @@
       </a>
 
       <!-- Orang Tua -->
-      <a href="login.html?role=orangtua" class="role-card role-ortu group">
+      <a href="login.php?role=orangtua" class="role-card role-ortu group">
         <div class="role-icon">
           <i class="ph-fill ph-users-three"></i>
         </div>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'orang_tua') {
+    header("Location: ../login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -44,7 +51,7 @@
             </a>
         </div>
 
-        <a href="../index.html" class="ortu-nav-item" style="color: #ef4444;">
+        <a href="../logout.php" class="ortu-nav-item" style="color: #ef4444;">
             <i class="ph ph-sign-out"></i> Logout
         </a>
     </nav>
@@ -148,8 +155,13 @@
                 <h3 class="mb-4 font-bold text-slate-700">Data Orang Tua / Wali</h3>
                 <div class="profile-detail-item">
                     <span class="profile-label">Nama Lengkap</span>
-                    <span class="profile-value">Bapak Budi Santoso</span>
+                    <span class="profile-value"><?php echo htmlspecialchars($_SESSION['username']); ?></span>
                 </div>
+                <div class="profile-detail-item">
+                    <span class="profile-label">Email</span>
+                    <span class="profile-value"><?php echo htmlspecialchars($_SESSION['email']); ?></span>
+                </div>
+                <!-- Placeholder data for now -->
                 <div class="profile-detail-item">
                     <span class="profile-label">Hubungan</span>
                     <span class="profile-value">Ayah Kandung</span>
